@@ -23,7 +23,7 @@ main = do
 
 
 printTreeOnLoad stmTree = do
-  unTree <- atomically $ unloadSTMTree stmTree
+  unTree <- atomically $ waitForSTMTree stmTree
   print unTree
   printTreeOnLoad stmTree
 
