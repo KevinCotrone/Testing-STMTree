@@ -16,6 +16,21 @@ Library
   Exposed-Modules:      Testing.STMTree
   Other-Modules:        Testing.STMTree.Internal
   Build-Depends:        base >= 4 && < 5
+                      , stm
+                      , async
+                      , containers
+
+
+executable example
+  Main-Is:        Main.hs
+  Default-Language: Haskell2010
+  hs-source-dirs: example
+  Build-Depends:  base                >= 4    &&  < 5
+                  , stm
+                  , async
+                  , containers
+                  , Testing-STMTree
+
 
 Test-Suite spec
   Type:                 exitcode-stdio-1.0
